@@ -83,16 +83,16 @@ def draw_story(draw, x, y, cell_w, cell_h, number, kicker, headline, summary):
     draw.text((x + 44, y + 8), kicker, font=kick_font, fill=RED)
 
     # Headline: big, bold, up to 3 lines.
-    head_font = font(SANS_BOLD, 31)
+    head_font = font(SANS_BOLD, 32)
     text_w = cell_w
     lines = wrap(draw, headline, head_font, text_w)
     hy = y + 44
     for line in lines[:3]:
         draw.text((x, hy), line, font=head_font, fill=INK)
-        hy += 37
+        hy += 38
 
     # Summary: one or two lines, regular weight.
-    sum_font = font(SANS, 21)
+    sum_font = font(SANS, 22)
     slines = wrap(draw, summary, sum_font, text_w)
     sy = hy + 6
     for line in slines[:2]:
